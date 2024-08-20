@@ -1,5 +1,3 @@
-/* Import de fonts */
-
 @import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jura:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jura:wght@300&family=Neonderthaw&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jura:wght@300&family=Neonderthaw&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -11,7 +9,6 @@ body {
   box-sizing: border-box;
 }
 
-/*  Style Navbar */
 header {
   padding-top: 1.5rem;
   padding-bottom: 1.5em;
@@ -60,7 +57,7 @@ header {
   left: 5%;
   flex-direction: column;
   max-width: fit-content;
-  gap: 20px;
+  gap: 0.5rem;
 }
 
 .navbar .nav_phone {
@@ -70,15 +67,15 @@ header {
   background-color: #ada796;
   position: absolute;
   transition: opacity 0.2s ease-in-out;
-  gap: 4rem;
-  top: 15rem;
-  left: 30px;
+  gap: 1rem;
+  top: 6.5rem;
+  left: 1rem;
   width: 70%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  border-radius: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 1rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
@@ -91,37 +88,59 @@ header {
   color: white;
   font-family: "Changa one", sans-serif;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 20px;
 }
 
 .burger_btn .top {
-  height: 0.75rem;
-  width: 6rem;
+  height: 0.25rem;
+  width: 3rem;
   border-radius: 9999px;
   background-color: #ada796;
+  transition: 0.3s ease-in-out;
+}
+
+.burger_btn .top-enabled {
+  transform: rotate(45deg) translateY(15px);
+  transition: 0.3s ease-in-out;
 }
 
 .burger_btn .mid {
-  height: 0.75rem;
-  width: 4rem;
-  border-radius: 9999px;
-  background-color: #ada796;
-}
-.burger_btn .bot {
-  height: 0.75rem;
+  height: 0.25rem;
   width: 2rem;
   border-radius: 9999px;
   background-color: #ada796;
+  transition: 0.3s ease-in-out;
+}
+
+.burger_btn .mid-enabled {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.burger_btn .bot {
+  height: 0.25rem;
+  width: 1rem;
+  border-radius: 9999px;
+  background-color: #ada796;
+  transition: 0.3s ease-in-out;
+}
+
+.burger_btn .bot-enabled {
+  transform: rotate(-45deg) translateY(-15px);
+
+  width: 3rem;
+  transition: 0.3s ease-in-out;
 }
 
 .navbar .logo {
   display: flex;
-  max-width: 175px;
-  height: 75px;
+  max-width: 170px;
+  height: 65px;
   object-fit: cover;
   position: absolute;
   top: 18%;
-  left: 46%;
+  transform: translateX(-50%);
+  left: 50%;
 }
 .navbar .contact_wrapper {
   padding-right: 3rem;
@@ -206,12 +225,11 @@ strong {
   top: 2px;
 }
 
-/* Section Join Us */
 .join_us {
   opacity: 0;
   display: flex;
   flex-direction: column;
-  margin-top: 170px;
+  margin-top: 150px;
   align-items: center;
   font-family: "Changa One", sans-serif;
 }
@@ -255,6 +273,7 @@ strong {
   background-size: cover;
   border-radius: 1.5rem;
   max-width: 100%;
+  height: 75vh;
   object-fit: cover;
   margin: auto;
   animation: fade-in 0.5s ease-in-out forwards;
@@ -288,7 +307,7 @@ strong {
   margin-bottom: 3rem;
 }
 
-.post_differently h1 {
+.post_differently h2 {
   font-family: "Changa One", sans-serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -300,14 +319,14 @@ strong {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80%;
+  max-width: 90%;
   margin-top: 3rem;
   background-color: #f2ead5;
-  padding-top: 2rem;
+  padding-top: 3rem;
   margin: auto;
-  padding-bottom: 2rem;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-bottom: 3rem;
+  padding-left: 30%;
+  padding-right: 30%;
   border-radius: 1.5rem;
 
   gap: 2rem;
@@ -359,8 +378,6 @@ strong {
   transition: 0.2s;
 }
 
-/* Footer */
-
 footer {
   padding-top: 8rem;
   padding-bottom: 3rem;
@@ -402,6 +419,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   gap: 50px;
+  margin-bottom: 2rem;
 }
 
 .credentials strong {
@@ -433,191 +451,110 @@ footer {
   margin: 0;
 }
 
-/*  Responsive */
-
 @media only screen and (min-width: 300px) and (max-width: 1000px) {
   .navbar {
-    max-height: 8vh;
-    min-height: 8vh;
+    max-height: 4vh;
+    min-height: 4vh;
   }
   .navbar .nav_menu {
     display: none;
-  }
-  .navbar .logo {
-    display: fixed;
-    max-width: 110%;
-    height: 150px;
-    object-fit: cover;
-    position: absolute;
-    top: 16%;
-    left: 34%;
-  }
-
-  .navbar .contact_wrapper {
-    display: none;
-  }
-
-  .navbar .sidebar {
-    display: flex;
-    flex-direction: column;
   }
 
   .navbar .burger_btn {
     display: flex;
   }
 
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
+  .navbar .contact_wrapper {
+    display: none;
+  }
+
+  .navbar .logo {
+    display: flex;
+    max-width: 170px;
+    height: 50px;
+    object-fit: cover;
+    position: absolute;
+    top: 18%;
+    transform: translateX(-50%);
+    left: 50%;
   }
 
   .join_us {
-    padding-top: 300px;
-    margin: auto;
-    width: 100%;
+    margin-top: 150px;
   }
 
+  .join_us img {
+    height: 600px;
+  }
   .join_us h1 {
-    width: 70%;
-    margin: auto;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 80px;
+    font-size: 30px;
   }
-  .join_us h2 {
+
+  .join_us .mhcs_paragraphe {
     display: flex;
-    text-align: center;
     flex-direction: column;
-    font-size: 70px;
-  }
-
-  .h2_text {
-    font-size: 70px;
-  }
-
-  .join_us .image_mhcs img {
-    height: 1700px;
-  }
-  .contact_form {
-    width: 80%;
-    margin: auto;
+    text-align: center;
+    max-width: 90%;
   }
 
   .post_differently .coord {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 50%;
-    height: 40vh;
-    margin-top: 3rem;
-    background-color: #f2ead5;
-    justify-content: center;
-    margin-inline: auto;
-    border-radius: 4 rem;
-    gap: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
   }
 
-  .post_differently .paragraphe {
-    width: 70%;
-    margin: auto;
-    font-size: 45px;
-    font-style: italic;
+  .post_differently h2 {
     text-align: center;
-  }
-
-  .coord h1 {
-    font-size: 5rem;
-    line-height: 4.5rem;
-    text-align: center;
+    font-size: 2rem;
+    width: 170%;
   }
 
   .coord .mail_tel {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 2rem;
   }
 
-  .coord .mail_tel a {
-    font-size: 50px;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  .mail_tel a {
+    font-size: 16px;
+  }
+
+  .mail_tel a {
+    text-align: center;
+    font-size: 16px;
   }
 
   .footer .wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    max-width: 90%;
     margin: auto;
     align-items: flex-start;
-    gap: 5rem;
+  }
+
+  .wrapper .credentials img {
+    width: 50%;
+    height: auto;
   }
 
   .wrapper .menu_wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 4rem;
-  }
-
-  .wrapper .credentials {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .credentials strong {
-    font-size: 30px;
-    font-family: "Arial", sans-serif;
-    font-weight: 700;
-  }
-
-  .wrapper .credentials img {
-    width: 60%;
-    height: auto;
-  }
-
-  .wrapper .mhcs {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .wrapper .privacy {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .wrapper .stay_connected {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
   }
 
   .wrapper .mhcs h6 {
-    font-size: 40px;
-    font-family: "Arial";
-    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   .wrapper .privacy h6 {
-    font-size: 40px;
-    font-family: "Arial";
-    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   .wrapper .stay_connected h6 {
-    font-size: 40px;
-    font-family: "Arial";
-    margin: 0;
-  }
-
-  .wrapper a {
-    font-size: 40px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 }
 @media (min-width: 1000px) and (max-width: 1280px) {
